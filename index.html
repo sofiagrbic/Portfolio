@@ -6,7 +6,7 @@
     <title>Sofia Grbic | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Bodoni+Moda:ital,wght@0,400;1,400&family=Inter:wght@300;600&display=swap" rel="stylesheet">
     <style>
-       :root { 
+        :root { 
             --bg: #fdfcf0; 
             --pink: #ff9fb2; 
             --green: #7eb356; 
@@ -17,33 +17,92 @@
 
         body { margin: 0; background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; overflow-x: hidden; }
         
-        nav { padding: 40px; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; box-sizing: border-box; z-index: 1000; mix-blend-mode: multiply; }
-        nav a { text-decoration: none; color: var(--text); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 3px; margin-left: 30px; transition: 0.3s; }
+        nav { padding: 40px; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; box-sizing: border-box; z-index: 1000; }
+        nav a { text-decoration: none; color: var(--white); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 3px; margin-left: 30px; transition: 0.3s; text-shadow: 0 2px 4px rgba(0,0,0,0.2); font-weight: 600; }
         nav a:hover { color: var(--pink); font-style: italic; }
 
-        /* HERO - Now using tree.jpg */
-        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(253,250,246,0.3), rgba(253,250,246,0.3)), url('tree.jpg'); background-size: cover; background-position: center; }
-        .hero-name { font-family: 'Pinyon Script', cursive; font-size: clamp(5rem, 15vw, 12rem); color: var(--pink); margin: 0; line-height: 0.8; transition: var(--fade); cursor: default; }
-        .hero-name:hover { transform: scale(1.05); text-shadow: 0 0 20px rgba(212,163,163,0.3); }
-        .hero-sub { font-family: 'Bodoni Moda', serif; font-style: italic; letter-spacing: 5px; text-transform: uppercase; font-size: 0.9rem; margin-top: 20px; opacity: 0.8; }
+        .hero { 
+            height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center; 
+            background: linear-gradient(rgba(45, 55, 50, 0.45), rgba(45, 55, 50, 0.45)), url('tree.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+        }
+
+        .hero-name { 
+            font-family: 'Pinyon Script', cursive; 
+            font-size: clamp(5rem, 15vw, 12rem); 
+            color: var(--white); 
+            margin: 0; 
+            line-height: 0.8; 
+            transition: var(--fade); 
+            cursor: default; 
+            text-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .hero-name:hover { 
+            color: var(--pink);
+            transform: scale(1.05); 
+            text-shadow: 0 0 40px rgba(255, 159, 178, 0.6); 
+        }
+
+        .hero-sub { 
+            font-family: 'Bodoni Moda', serif; 
+            font-style: italic; 
+            letter-spacing: 5px; 
+            text-transform: uppercase; 
+            font-size: 0.9rem; 
+            margin-top: 20px; 
+            color: var(--white);
+            opacity: 0.9;
+        }
 
         .about { padding: 150px 10%; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-        .about-img { width: 100%; aspect-ratio: 4/5; object-fit: cover; border: 15px solid white; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
-        .about-text h2 { font-family: 'Bodoni Moda', serif; font-size: 3rem; font-style: italic; margin-bottom: 30px; color: var(--green); }
+        .about-img { width: 100%; aspect-ratio: 4/5; object-fit: cover; border: 15px solid white; box-shadow: 0 20px 40px rgba(126, 179, 86, 0.1); }
+        
+        .about-text h2 { 
+            font-family: 'Bodoni Moda', serif; 
+            font-size: 3.5rem; 
+            font-style: italic; 
+            margin-bottom: 30px; 
+            color: var(--green); 
+        }
+        
         .about-text p { font-size: 1.1rem; line-height: 1.8; font-weight: 300; }
 
-        /* Social Link Styling */
         .social-cluster { margin-top: 40px; display: flex; flex-direction: column; gap: 15px; }
-        .social-link { color: var(--text); text-decoration: none; font-size: 0.8rem; border-bottom: 1px solid transparent; padding-bottom: 5px; width: fit-content; transition: 0.3s; letter-spacing: 1px;}
-        .social-link:hover { border-color: var(--pink); color: var(--pink); }
+        .social-link { 
+            color: var(--text); 
+            text-decoration: none; 
+            font-size: 0.85rem; 
+            border-bottom: 1px solid var(--green); 
+            padding-bottom: 5px; 
+            width: fit-content; 
+            transition: 0.3s; 
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        .social-link:hover { 
+            border-color: var(--pink); 
+            color: var(--pink); 
+            transform: translateX(10px); 
+        }
 
-        footer { padding: 100px 0; text-align: center; font-size: 0.6rem; letter-spacing: 4px; opacity: 0.5; }
+        footer { padding: 100px 0; text-align: center; font-size: 0.6rem; letter-spacing: 4px; opacity: 0.5; color: var(--text); }
+
+        @media (max-width: 900px) {
+            .about { grid-template-columns: 1fr; padding-top: 80px; }
+        }
     </style>
 </head>
 <body>
 
     <nav>
-        <div style="font-family: 'Bodoni Moda'; font-style: italic; font-size: 1.2rem;">SG</div>
+        <div style="font-family: 'Bodoni Moda'; font-style: italic; font-size: 1.2rem; color: var(--white);">SG</div>
         <div>
             <a href="index.html">Home</a>
             <a href="work.html">Work</a>
@@ -64,15 +123,15 @@
             <p>I am a senior at the Leeds School of Business, graduating December 2026. My work is a dialogue between strategic discipline and creative freedom. I believe business should be as striking as art.</p>
             
             <div class="social-cluster">
-                <a href="mailto:sofia.grbic@colorado.edu" class="social-link">Email</a>
-                <a href="https://linkedin.com/in/sofiagrbic" class="social-link" target="_blank">LinkedIn</a>
-                <a href="https://instagram.com/stitchedbysofia" class="social-link" target="_blank">Brand Instagram — @stitchedbysofia</a>
-                <a href="https://instagram.com/your-personal-handle" class="social-link" target="_blank">Personal Instagram</a>
-                <a href="https://instagram.com/your-drawing-handle" class="social-link" target="_blank">Art Instagram</a>
+                <a href="mailto:Sofiamgrbic@gmail.com" class="social-link">Email — Sofiamgrbic@gmail.com</a>
+                <a href="https://www.linkedin.com/in/sofia-grbic" class="social-link" target="_blank">LinkedIn</a>
+                <a href="https://www.instagram.com/StiitchedbySofia" class="social-link" target="_blank">Brand — @StiitchedbySofia</a>
+                <a href="https://www.instagram.com/SofiaGrbic" class="social-link" target="_blank">Personal — @SofiaGrbic</a>
+                <a href="https://www.instagram.com/SketchedbySofia" class="social-link" target="_blank">Art — @SketchedbySofia</a>
             </div>
         </div>
     </section>
 
-    <footer>&copy; 2026 SOFIA GRBIC • CINEMATIC STRATEGY</footer>
+    <footer>&copy; 2026 SOFIA GRBIC • SPRINGTIME STRATEGY</footer>
 </body>
 </html>
