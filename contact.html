@@ -3,19 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Sofia Grbic</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,400&family=Inter:wght@200;400&display=swap" rel="stylesheet">
+    <title>Atelier | Sofia Grbic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,400&family=Inter:wght@300&display=swap" rel="stylesheet">
     <style>
-        :root { --bg: #fdfaf6; --pink: #d4a3a3; --gray: #2d2d2d; }
-        body { margin: 0; background: var(--bg); color: var(--gray); font-family: 'Inter', sans-serif; text-align: center; }
-        nav { padding: 40px; display: flex; justify-content: space-between; border-bottom: 1px solid #eee; }
-        nav a { text-decoration: none; color: #2d2d2d; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 3px; margin-left: 30px; }
-        .container { max-width: 600px; margin: 100px auto; padding: 0 40px; }
-        h1 { font-family: 'Bodoni Moda'; font-style: italic; font-size: 4rem; color: var(--pink); }
-        .link { display: block; margin: 30px 0; font-size: 1rem; color: var(--gray); text-decoration: none; border-bottom: 1px solid #ddd; padding-bottom: 10px; letter-spacing: 2px; }
-        .link:hover { color: var(--pink); border-color: var(--pink); }
-        .resume-btn { display: inline-block; padding: 25px 60px; background: var(--gray); color: white; text-decoration: none; margin-top: 50px; letter-spacing: 3px; font-weight: 600; font-size: 0.8rem; transition: 0.3s; }
-        .resume-btn:hover { background: var(--pink); }
+        :root { --bg: #fdfaf6; --pink: #d4a3a3; --green: #8da399; --text: #2d2d2d; }
+        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; }
+        
+        nav { padding: 40px; display: flex; justify-content: space-between; position: sticky; top: 0; background: rgba(253, 250, 246, 0.9); z-index: 1000; border-bottom: 1px solid #eee; }
+        nav a { text-decoration: none; color: var(--text); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 3px; margin-left: 30px; transition: 0.3s; }
+        nav a:active { transform: scale(0.95); color: var(--pink); }
+
+        .container { max-width: 1200px; margin: 80px auto; padding: 0 40px; }
+        h1 { font-family: 'Bodoni Moda'; font-style: italic; font-size: clamp(3rem, 8vw, 5rem); text-align: center; margin-bottom: 80px; color: var(--green); }
+
+        /* SCRAPBOOK MASONRY LAYOUT */
+        .scrapbook { column-count: 3; column-gap: 40px; }
+
+        .scrapbook-item { 
+            break-inside: avoid; 
+            margin-bottom: 60px; 
+            background: white; 
+            padding: 15px 15px 40px 15px; 
+            box-shadow: 5px 10px 30px rgba(0,0,0,0.05); 
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+
+        /* Tilted Photos Effect */
+        .scrapbook-item:nth-child(odd) { transform: rotate(-2deg); }
+        .scrapbook-item:nth-child(even) { transform: rotate(2deg); }
+
+        .scrapbook-item:hover { 
+            transform: rotate(0deg) scale(1.03); 
+            box-shadow: 10px 20px 40px rgba(0,0,0,0.1); 
+            z-index: 10;
+        }
+
+        .scrapbook-item:active { transform: scale(0.98); }
+
+        .scrapbook-item img { width: 100%; height: auto; filter: sepia(10%); display: block; }
+
+        .art-info { margin-top: 20px; text-align: center; }
+        .art-info h3 { font-family: 'Bodoni Moda'; font-style: italic; font-size: 1.2rem; margin: 0; color: var(--text); }
+        .art-info p { font-size: 0.75rem; opacity: 0.6; margin-top: 5px; letter-spacing: 1px; text-transform: uppercase; }
+
+        @media (max-width: 900px) { .scrapbook { column-count: 2; } }
+        @media (max-width: 600px) { .scrapbook { column-count: 1; } }
     </style>
 </head>
 <body>
@@ -24,15 +57,41 @@
         <div><a href="index.html">Home</a><a href="work.html">Work</a><a href="atelier.html">Atelier</a><a href="contact.html">Contact</a></div>
     </nav>
     <div class="container">
-        <p style="text-transform: uppercase; letter-spacing: 5px; font-size: 0.7rem; opacity: 0.5;">Inquiries</p>
-        <h1>Let's Connect</h1>
-        <a href="mailto:sofiamgrbic@gmail.com" class="link">Email</a>
-        <a href="https://www.linkedin.com/in/sofia-grbic" class="link" target="_blank">LinkedIn</a>
-        <a href="https://instagram.com/stiitchedbysofia" class="link" target="_blank">@stitchedbysofia</a>
-        <a href="https://www.instagram.com/sofiagrbic/" class="link" target="_blank">Personal Instagram</a>
-        <a href="https://www.instagram.com/sketchedbysofia/" class="link" target="_blank">Art & Illustration</a>
-        
-        <a href="resume.pdf" class="resume-btn" target="_blank">DOWNLOAD RESUME</a>
+        <h1>The Atelier</h1>
+        <div class="scrapbook">
+            
+            <!-- ART PIECE 1 -->
+            <div class="scrapbook-item">
+                <img src="art1.jpg" alt="Art 1">
+                <div class="art-info">
+                    <h3>Summer Reverie</h3> <!-- EDIT TITLE HERE -->
+                    <p>Oil on Canvas, 2024</p> <!-- EDIT MEDIUM/YEAR HERE -->
+                </div>
+            </div>
+
+            <!-- ART PIECE 2 -->
+            <div class="scrapbook-item">
+                <img src="art2.jpg" alt="Art 2">
+                <div class="art-info">
+                    <h3>Strategic Bloom</h3>
+                    <p>Digital Illustration, 2023</p>
+                </div>
+            </div>
+
+            <!-- Repeat this block for images 3-12 -->
+            <!-- I'll keep the placeholders simple for you to fill in -->
+            <div class="scrapbook-item"><img src="art3.jpg"><div class="art-info"><h3>Art Title</h3><p>Medium, Year</p></div></div>
+            <div class="scrapbook-item"><img src="art4.jpg"><div class="art-info"><h3>Art Title</h3><p>Medium, Year</p></div></div>
+            <div class="scrapbook-item"><img src="art5.jpg"><div class="art-info"><h3>Art Title</h3><p>Medium, Year</p></div></div>
+            <div class="scrapbook-item"><img src="art6.jpg"><div class="art-info"><h3>Art Title</h3><p>Medium, Year</p></div></div>
+            <div class="scrapbook-item"><img src="art7.jpg"><div class="art-info"><h3>Art Title</h3><p>Medium, Year</p></div></div>
+            <div class="scrapbook-item"><img src="art8.jpg"><div class="art-info"><h3>Art Title</h3><p>Medium, Year</p></div></div>
+            <div class="scrapbook-item"><img src="art9.jpg"><div class="art-info"><h3>Art Title</h3><p>Medium, Year</p></div></div>
+            <div class="scrapbook-item"><img src="art10.jpg"><div class="art-info"><h3>Art Title</h3><p>Medium, Year</p></div></div>
+            <div class="scrapbook-item"><img src="art11.jpg"><div class="art-info"><h3>Art Title</h3><p>Medium, Year</p></div></div>
+            <div class="scrapbook-item"><img src="art12.jpg"><div class="art-info"><h3>Art Title</h3><p>Medium, Year</p></div></div>
+
+        </div>
     </div>
 </body>
 </html>
