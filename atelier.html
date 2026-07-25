@@ -6,20 +6,49 @@
     <title>Atelier | Sofia Grbic</title>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,400&family=Inter:wght@300&display=swap" rel="stylesheet">
     <style>
-        body { background: #fdfaf6; color: #2d2d2d; font-family: 'Inter', sans-serif; margin: 0; }
-        nav { padding: 40px; display: flex; justify-content: space-between; border-bottom: 1px solid #eee; }
-        nav a { text-decoration: none; color: #2d2d2d; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 3px; margin-left: 30px; }
-        .container { max-width: 1200px; margin: 80px auto; padding: 0 40px; }
-        h1 { font-family: 'Bodoni Moda'; font-style: italic; font-size: 4rem; text-align: center; margin-bottom: 100px; color: #8da399; }
+        :root { --bg: #fdfaf6; --pink: #d4a3a3; --green: #8da399; --text: #2d2d2d; }
+        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; }
         
-        .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
-        .item { margin-bottom: 40px; }
-        .item img { width: 100%; aspect-ratio: 1/1; object-fit: cover; filter: sepia(20%); transition: 0.5s; border: 1px solid #eee; }
-        .item:hover img { filter: sepia(0%); transform: translateY(-10px); }
-        .item h3 { font-family: 'Bodoni Moda'; font-style: italic; font-size: 1.2rem; margin: 15px 0 5px 0; }
-        .item p { font-size: 0.8rem; opacity: 0.6; margin: 0; letter-spacing: 1px; }
+        nav { padding: 40px; display: flex; justify-content: space-between; position: sticky; top: 0; background: rgba(253, 250, 246, 0.9); z-index: 1000; border-bottom: 1px solid #eee; }
+        nav a { text-decoration: none; color: var(--text); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 3px; margin-left: 30px; transition: 0.3s; }
+        nav a:active { transform: scale(0.95); color: var(--pink); }
 
-        @media (max-width: 768px) { .gallery { grid-template-columns: repeat(1, 1fr); } }
+        .container { max-width: 1200px; margin: 80px auto; padding: 0 40px; }
+        h1 { font-family: 'Bodoni Moda'; font-style: italic; font-size: clamp(3rem, 8vw, 5rem); text-align: center; margin-bottom: 80px; color: var(--green); }
+
+        /* SCRAPBOOK MASONRY LAYOUT */
+        .scrapbook { column-count: 3; column-gap: 40px; }
+
+        .scrapbook-item { 
+            break-inside: avoid; 
+            margin-bottom: 60px; 
+            background: white; 
+            padding: 15px 15px 40px 15px; 
+            box-shadow: 5px 10px 30px rgba(0,0,0,0.05); 
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+
+        /* Tilted Photos Effect */
+        .scrapbook-item:nth-child(odd) { transform: rotate(-2deg); }
+        .scrapbook-item:nth-child(even) { transform: rotate(2deg); }
+
+        .scrapbook-item:hover { 
+            transform: rotate(0deg) scale(1.03); 
+            box-shadow: 10px 20px 40px rgba(0,0,0,0.1); 
+            z-index: 10;
+        }
+
+        .scrapbook-item:active { transform: scale(0.98); }
+
+        .scrapbook-item img { width: 100%; height: auto; filter: sepia(10%); display: block; }
+
+        .art-info { margin-top: 20px; text-align: center; }
+        .art-info h3 { font-family: 'Bodoni Moda'; font-style: italic; font-size: 1.2rem; margin: 0; color: var(--text); }
+        .art-info p { font-size: 0.75rem; opacity: 0.6; margin-top: 5px; letter-spacing: 1px; text-transform: uppercase; }
+
+        @media (max-width: 900px) { .scrapbook { column-count: 2; } }
+        @media (max-width: 600px) { .scrapbook { column-count: 1; } }
     </style>
 </head>
 <body>
@@ -29,19 +58,39 @@
     </nav>
     <div class="container">
         <h1>The Atelier</h1>
-        <div class="gallery">
-            <div class="item"><img src="art1.jpg"><h3>Title of Art</h3><p>Medium / Year</p></div>
-            <div class="item"><img src="art2.jpg"><h3>Title of Art</h3><p>Medium / Year</p></div>
-            <div class="item"><img src="art3.jpg"><h3>Title of Art</h3><p>Medium / Year</p></div>
-            <div class="item"><img src="art4.jpg"><h3>Title of Art</h3><p>Medium / Year</p></div>
-            <div class="item"><img src="art5.jpg"><h3>Title of Art</h3><p>Medium / Year</p></div>
-            <div class="item"><img src="art6.jpg"><h3>Title of Art</h3><p>Medium / Year</p></div>
-            <div class="item"><img src="art7.jpg"><h3>Title of Art</h3><p>Medium / Year</p></div>
-            <div class="item"><img src="art8.jpg"><h3>Title of Art</h3><p>Medium / Year</p></div>
-            <div class="item"><img src="art9.jpg"><h3>Title of Art</h3><p>Medium / Year</p></div>
-            <div class="item"><img src="art10.jpg"><h3>Title of Art</h3><p>Medium / Year</p></div>
-            <div class="item"><img src="art11.jpg"><h3>Title of Art</h3><p>Medium / Year</p></div>
-            <div class="item"><img src="art12.jpg"><h3>Title of Art</h3><p>Medium / Year</p></div>
+        <div class="scrapbook">
+            
+            <!-- ART PIECE 1 -->
+            <div class="scrapbook-item">
+                <img src="art1.jpg" alt="Art 1">
+                <div class="art-info">
+                    <h3>Summer Reverie</h3> <!-- EDIT TITLE HERE -->
+                    <p>Oil on Canvas, 2024</p> <!-- EDIT MEDIUM/YEAR HERE -->
+                </div>
+            </div>
+
+            <!-- ART PIECE 2 -->
+            <div class="scrapbook-item">
+                <img src="art2.jpg" alt="Art 2">
+                <div class="art-info">
+                    <h3>Strategic Bloom</h3>
+                    <p>Digital Illustration, 2023</p>
+                </div>
+            </div>
+
+            <!-- Repeat this block for images 3-12 -->
+            <!-- I'll keep the placeholders simple for you to fill in -->
+            <div class="scrapbook-item"><img src="art3.jpg"><div class="art-info"><h3>Art Title</h3><p>Medium, Year</p></div></div>
+            <div class="scrapbook-item"><img src="art4.jpg"><div class="art-info"><h3>Art Title</h3><p>Medium, Year</p></div></div>
+            <div class="scrapbook-item"><img src="art5.jpg"><div class="art-info"><h3>Art Title</h3><p>Medium, Year</p></div></div>
+            <div class="scrapbook-item"><img src="art6.jpg"><div class="art-info"><h3>Art Title</h3><p>Medium, Year</p></div></div>
+            <div class="scrapbook-item"><img src="art7.jpg"><div class="art-info"><h3>Art Title</h3><p>Medium, Year</p></div></div>
+            <div class="scrapbook-item"><img src="art8.jpg"><div class="art-info"><h3>Art Title</h3><p>Medium, Year</p></div></div>
+            <div class="scrapbook-item"><img src="art9.jpg"><div class="art-info"><h3>Art Title</h3><p>Medium, Year</p></div></div>
+            <div class="scrapbook-item"><img src="art10.jpg"><div class="art-info"><h3>Art Title</h3><p>Medium, Year</p></div></div>
+            <div class="scrapbook-item"><img src="art11.jpg"><div class="art-info"><h3>Art Title</h3><p>Medium, Year</p></div></div>
+            <div class="scrapbook-item"><img src="art12.jpg"><div class="art-info"><h3>Art Title</h3><p>Medium, Year</p></div></div>
+
         </div>
     </div>
 </body>
