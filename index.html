@@ -3,238 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sofia Grbic | Portfolio</title>
+    <title>Sofia Grbic | Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #fcfcfc; /* Pure neutral */
-            --primary-gray: #2d2d2d; /* Sophisticated Dark Gray */
-            --baby-pink: #f9ecec; /* Very light baby pink */
-            --soft-green: #e9f0eb; /* Light neutral green */
-            --accent-pink: #f4d3d3; 
+            --bg-color: #fcfcfc;
+            --primary-gray: #2d2d2d;
+            --baby-pink: #f9ecec;
+            --soft-green: #e9f0eb;
             --transition: all 0.6s cubic-bezier(0.2, 1, 0.3, 1);
         }
 
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
+        body { margin: 0; font-family: 'Inter', sans-serif; background: var(--bg-color); color: var(--primary-gray); }
+        
+        /* NAV BAR */
+        nav {
+            padding: 30px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background: rgba(252, 252, 252, 0.9);
+            z-index: 1000;
         }
+        nav a { text-decoration: none; color: var(--primary-gray); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 2px; margin-left: 30px; transition: 0.3s; }
+        nav a:hover { color: #f4d3d3; }
 
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--primary-gray);
-            overflow-x: hidden;
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 40px;
-            animation: fadeInUp 1.2s ease-out;
-        }
-
-        /* HERO SECTION */
-        header {
-            padding: 150px 0 100px 0;
-            text-align: center;
-        }
-
-        /* MASSIVE NAME WITH WRITING EFFECT */
+        /* HERO */
+        header { padding: 100px 0; text-align: center; }
         .hero-title {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(4rem, 12vw, 10rem); /* MASSIVE */
-            margin: 0;
+            font-size: clamp(4rem, 12vw, 10rem);
             font-style: italic;
-            font-weight: 400;
-            color: var(--primary-gray);
             cursor: pointer;
             transition: var(--transition);
             letter-spacing: -2px;
-            position: relative;
-            display: inline-block;
         }
+        .hero-title:hover { letter-spacing: 5px; text-shadow: 3px 3px 0px var(--baby-pink); }
 
-        /* THE HOVER "WRITING" EFFECT */
-        .hero-title:hover {
-            letter-spacing: 5px; /* Spreads out as if being written */
-            color: var(--primary-gray);
-            text-shadow: 3px 3px 0px var(--baby-pink); /* Whimsical glow */
-        }
-
-        .hero-subtitle {
-            font-size: 0.9rem;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            font-weight: 400;
-            color: var(--primary-gray);
-            margin-top: 20px;
-            opacity: 0.6;
-        }
-
-        /* SECTION STYLING */
-        section { padding: 100px 0; }
-
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            margin-bottom: 60px;
-            text-align: center;
-            font-style: italic;
-        }
-
-        /* GRID FOR VENTURES */
-        .grid {
+        /* SKILLS SECTION */
+        .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
+            margin: 50px 0;
         }
-
-        .card {
-            background: white;
-            padding: 40px;
-            border: 1px solid #eee;
-            transition: var(--transition);
-        }
-
-        .card:hover {
-            background-color: var(--soft-green); /* Subtle green accent */
-            transform: translateY(-10px);
-            border-color: transparent;
-        }
-
-        .card h3 {
-            font-family: 'Playfair Display', serif;
-            margin-top: 0;
-            font-size: 1.8rem;
-        }
-
-        /* 9-IMAGE ATELIER GRID */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 columns */
-            gap: 15px;
-        }
-
-        .gallery-item {
-            aspect-ratio: 1 / 1;
-            overflow: hidden;
-            background: #f0f0f0;
-            position: relative;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-            filter: grayscale(20%);
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-            filter: grayscale(0%);
-        }
-
-        /* PODCAST SECTION */
-        .podcast-box {
-            background-color: var(--baby-pink); /* Baby pink accent */
-            padding: 80px 40px;
+        .skill-tag {
+            background: var(--soft-green);
+            padding: 15px;
             text-align: center;
-            border-radius: 0px;
-        }
-
-        /* BUTTONS */
-        .btn {
-            display: inline-block;
-            padding: 18px 45px;
-            background-color: var(--primary-gray);
-            color: white;
-            text-decoration: none;
             font-size: 0.8rem;
-            letter-spacing: 2px;
-            font-weight: 600;
-            transition: var(--transition);
-            margin-top: 30px;
-        }
-
-        .btn:hover {
-            background-color: transparent;
-            color: var(--primary-gray);
-            border: 1px solid var(--primary-gray);
-        }
-
-        footer {
-            padding: 80px 0;
-            text-align: center;
-            font-size: 0.7rem;
-            letter-spacing: 3px;
+            letter-spacing: 1px;
             text-transform: uppercase;
-            opacity: 0.4;
         }
 
-        /* Mobile Adjustments */
-        @media (max-width: 768px) {
-            .gallery { grid-template-columns: repeat(2, 1fr); }
-            .hero-title { font-size: 4rem; }
+        .brand-wall {
+            text-align: center;
+            padding: 60px 0;
+            border-top: 1px solid #eee;
+            font-family: 'Playfair Display';
+            font-size: 1.2rem;
+            opacity: 0.7;
         }
+
+        footer { padding: 50px 0; text-align: center; font-size: 0.6rem; letter-spacing: 2px; opacity: 0.4; }
     </style>
 </head>
 <body>
 
+    <nav>
+        <div style="font-weight: 600; letter-spacing: 2px;">SG</div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="work.html">Work</a>
+            <a href="atelier.html">Atelier</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
     <header class="container">
         <h1 class="hero-title">Sofia Grbic</h1>
-        <p class="hero-subtitle">Entrepreneur • Strategist • Creative</p>
+        <p style="letter-spacing: 5px; text-transform: uppercase; font-size: 0.8rem; opacity: 0.6;">Strategist & Creative Polymath</p>
     </header>
 
     <main class="container">
-        
-        <section>
-            <h2 class="section-title">The Ventures</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Stitched by Sofia</h3>
-                    <p>DTC Founder. 450+ custom orders. A study in craftsmanship and digital scaling.</p>
-                </div>
-                <div class="card">
-                    <h3>Strategy</h3>
-                    <p>Building digital ecosystems for modern startups. Executive HQ & Social Layer.</p>
-                </div>
-                <div class="card">
-                    <h3>Partnerships</h3>
-                    <p>Content creation and brand ambassadorship for Uber, Barry's, and more.</p>
-                </div>
+        <section style="text-align: center; max-width: 700px; margin: 0 auto;">
+            <h2 style="font-family: 'Playfair Display'; font-style: italic;">The Skillset</h2>
+            <p>From complex data in Excel to high-conversion storytelling on TikTok.</p>
+            <div class="skills-grid">
+                <div class="skill-tag">Strategy & Operations</div>
+                <div class="skill-tag">Excel & Data Analysis</div>
+                <div class="skill-tag">Adobe & Canva</div>
+                <div class="skill-tag">CapCut & Video Editing</div>
+                <div class="skill-tag">Coding (HTML/CSS)</div>
+                <div class="skill-tag">Global Market Entry</div>
             </div>
         </section>
 
-        <section class="podcast-box">
-            <h2 style="font-family: 'Playfair Display'; font-size: 3rem; margin:0;">Sofia Speaks!</h2>
-            <p style="letter-spacing: 1px; margin-top: 10px;">Intellectual dialogue for the ambitious student.</p>
-            <a href="#" class="btn">LISTEN NOW</a>
-        </section>
-
-        <section>
-            <h2 class="section-title">The Atelier</h2>
-            <div class="gallery">
-                <div class="gallery-item"><img src="art1.jpg" alt="Art"></div>
-                <div class="gallery-item"><img src="art2.jpg" alt="Art"></div>
-                <div class="gallery-item"><img src="art3.jpg" alt="Art"></div>
-                <div class="gallery-item"><img src="art4.jpg" alt="Art"></div>
-                <div class="gallery-item"><img src="art5.jpg" alt="Art"></div>
-                <div class="gallery-item"><img src="art6.jpg" alt="Art"></div>
-                <div class="gallery-item"><img src="art7.jpg" alt="Art"></div>
-                <div class="gallery-item"><img src="art8.jpg" alt="Art"></div>
-                <div class="gallery-item"><img src="art9.jpg" alt="Art"></div>
-            </div>
-        </section>
-
+        <div class="brand-wall">
+            Partnered with: Uber • Barry's • David Protein • Edikted • Moments • Prime IV
+        </div>
     </main>
 
-    <footer>
-        &copy; 2026 SOFIA GRBIC — LEEDS SCHOOL OF BUSINESS
-    </footer>
-
+    <footer>&copy; 2026 SOFIA GRBIC</footer>
 </body>
 </html>
