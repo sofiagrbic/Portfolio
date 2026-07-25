@@ -6,15 +6,22 @@
     <title>Work | Sofia Grbic</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
     <style>
-        /* (Same CSS as index.html - but let's add work-specific styles) */
         :root { --bg-color: #fcfcfc; --primary-gray: #2d2d2d; --baby-pink: #f9ecec; --soft-green: #e9f0eb; }
-        body { margin: 0; font-family: 'Inter', sans-serif; background: var(--bg-color); color: var(--primary-gray); }
-        nav { padding: 30px 40px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; background: rgba(252, 252, 252, 0.9); z-index: 1000; }
+        body { margin: 0; font-family: 'Inter', sans-serif; background: var(--bg-color); color: var(--primary-gray); line-height: 1.6; }
+        nav { padding: 30px 40px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; background: white; z-index: 1000; border-bottom: 1px solid #f0f0f0; }
         nav a { text-decoration: none; color: var(--primary-gray); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 2px; margin-left: 30px; }
-        .container { max-width: 1000px; margin: 0 auto; padding: 60px 40px; }
-        h1 { font-family: 'Playfair Display'; font-style: italic; font-size: 3rem; }
-        .work-item { margin-bottom: 80px; border-bottom: 1px solid #eee; padding-bottom: 40px; }
-        .work-label { font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; color: #a1a1a1; }
+        .container { max-width: 900px; margin: 0 auto; padding: 80px 40px; }
+        h1 { font-family: 'Playfair Display'; font-style: italic; font-size: 3.5rem; margin-bottom: 10px; }
+        .label { font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; opacity: 0.5; margin-bottom: 40px; display: block; }
+        
+        .section-block { margin-bottom: 100px; }
+        .work-card { background: white; padding: 40px; border: 1px solid #eee; margin-bottom: 30px; transition: 0.4s; }
+        .work-card:hover { border-color: var(--baby-pink); transform: translateY(-5px); }
+        
+        .skills-tag-container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+        .tag { padding: 8px 15px; background: var(--soft-green); font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; }
+        
+        .brand-list { font-family: 'Playfair Display'; font-size: 1.5rem; border-left: 3px solid var(--baby-pink); padding-left: 20px; color: #555; }
     </style>
 </head>
 <body>
@@ -29,25 +36,53 @@
     </nav>
 
     <div class="container">
-        <p class="work-label">Selected Ventures</p>
-        <h1>Case Studies</h1>
-
-        <div class="work-item">
-            <h2>Stitched by Sofia</h2>
-            <p><strong>Founder (2021—Present)</strong></p>
-            <p>Launched a custom embroidery brand via Instagram. Managed full-cycle operations including inventory strategy, machine embroidery, and social media marketing. Resulted in 450+ bespoke orders globally.</p>
+        <div class="section-block">
+            <span class="label">Portfolio of Ventures</span>
+            <h1>Strategic Work</h1>
+            <p>A blend of entrepreneurial ownership and corporate brand strategy.</p>
         </div>
 
-        <div class="work-item">
-            <h2>Lovers Counseling & Executive HQ</h2>
-            <p><strong>Social Media Strategy Lead</strong></p>
-            <p>Directly supporting Chloe Miller in the launch and scaling of two new ventures. Managing content pipelines across LinkedIn, Instagram, and TikTok to drive lead generation for career and couples counseling.</p>
+        <div class="section-block">
+            <div class="work-card">
+                <h3>Stitched by Sofia</h3>
+                <p><strong>DTC Founder | 2021-Present</strong></p>
+                <p>Scaling an embroidery brand from 0 to 450+ orders. I manage everything from machine maintenance and supply chain to TikTok marketing and customer relations.</p>
+                <div class="skills-tag-container">
+                    <div class="tag">Entrepreneurship</div>
+                    <div class="tag">Inventory Strategy</div>
+                    <div class="tag">Social Commerce</div>
+                </div>
+            </div>
+
+            <div class="work-card">
+                <h3>Social Media Strategy</h3>
+                <p><strong>Internship | Chloe Miller (Lovers Counseling, Executive HQ)</strong></p>
+                <p>Leading digital strategy for a couples counseling firm and a career counseling startup. Building content funnels that bridge mental health with professional growth.</p>
+                <div class="skills-tag-container">
+                    <div class="tag">Brand Management</div>
+                    <div class="tag">Content Strategy</div>
+                    <div class="tag">Startup Scaling</div>
+                </div>
+            </div>
         </div>
 
-        <div class="work-item">
-            <h2>Brand Partnership Portfolio</h2>
-            <p><strong>Content Creator / Ambassador</strong></p>
-            <p>Developing high-fidelity digital assets for partners including UberOne, Barry's, and Edikted. Focus on storytelling that aligns creative vision with corporate marketing KPIs.</p>
+        <div class="section-block">
+            <span class="label">Technical Expertise</span>
+            <div class="skills-tag-container">
+                <div class="tag">Advanced Excel</div>
+                <div class="tag">CapCut & TikTok Editing</div>
+                <div class="tag">Canva Pro</div>
+                <div class="tag">HTML/CSS Coding</div>
+                <div class="tag">Strategic Planning</div>
+                <div class="tag">Global Market Analysis</div>
+            </div>
+        </div>
+
+        <div class="section-block">
+            <span class="label">Brand Partners</span>
+            <p class="brand-list">
+                UberOne • Barry's Bootcamp • David Protein • Edikted • Points Chocolate • Prime IV • Moments • UberEats
+            </p>
         </div>
     </div>
 </body>
