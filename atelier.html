@@ -4,32 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atelier | Sofia Grbic</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,400&family=Inter:wght@300&display=swap" rel="stylesheet">
     <style>
-        :root { --bg: #fcfcfc; --gray: #2d2d2d; }
-        body { margin: 0; font-family: 'Inter', sans-serif; background: var(--bg); color: var(--gray); }
-        nav { padding: 30px 40px; display: flex; justify-content: space-between; align-items: center; background: white; border-bottom: 1px solid #eee; }
-        nav a { text-decoration: none; color: var(--gray); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 2px; margin-left: 30px; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 80px 40px; }
-        h1 { font-family: 'Playfair Display'; font-style: italic; font-size: 3.5rem; text-align: center; margin-bottom: 50px; }
-        .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
-        .item { aspect-ratio: 1/1; overflow: hidden; background: #eee; }
-        .item img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s; }
-        .item:hover img { transform: scale(1.1); }
-        @media (max-width: 768px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
+        body { background: #fdfaf6; color: #2d2d2d; font-family: 'Inter', sans-serif; margin: 0; }
+        nav { padding: 40px; display: flex; justify-content: space-between; border-bottom: 1px solid #eee; }
+        nav a { text-decoration: none; color: #2d2d2d; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 3px; margin-left: 30px; }
+        .container { max-width: 1200px; margin: 80px auto; padding: 0 40px; }
+        h1 { font-family: 'Bodoni Moda'; font-style: italic; font-size: 4rem; text-align: center; margin-bottom: 100px; color: #8da399; }
+        
+        .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+        .item { margin-bottom: 40px; }
+        .item img { width: 100%; aspect-ratio: 1/1; object-fit: cover; filter: sepia(20%); transition: 0.5s; border: 1px solid #eee; }
+        .item:hover img { filter: sepia(0%); transform: translateY(-10px); }
+        .item h3 { font-family: 'Bodoni Moda'; font-style: italic; font-size: 1.2rem; margin: 15px 0 5px 0; }
+        .item p { font-size: 0.8rem; opacity: 0.6; margin: 0; letter-spacing: 1px; }
+
+        @media (max-width: 768px) { .gallery { grid-template-columns: repeat(1, 1fr); } }
     </style>
 </head>
 <body>
     <nav>
-        <div style="font-weight: 600; letter-spacing: 2px;">SG</div>
+        <div style="font-family: 'Bodoni Moda'; font-style: italic; font-size: 1.2rem;">SG</div>
         <div><a href="index.html">Home</a><a href="work.html">Work</a><a href="atelier.html">Atelier</a><a href="contact.html">Contact</a></div>
     </nav>
     <div class="container">
         <h1>The Atelier</h1>
         <div class="gallery">
-            <div class="item"><img src="art1.jpg"></div><div class="item"><img src="art2.jpg"></div><div class="item"><img src="art3.jpg"></div>
-            <div class="item"><img src="art4.jpg"></div><div class="item"><img src="art5.jpg"></div><div class="item"><img src="art6.jpg"></div>
-            <div class="item"><img src="art7.jpg"></div><div class="item"><img src="art8.jpg"></div><div class="item"><img src="art9.jpg"></div>
+            <div class="item"><img src="art1.jpg"><h3>Title of Art</h3><p>Medium / Year</p></div>
+            <div class="item"><img src="art2.jpg"><h3>Title of Art</h3><p>Medium / Year</p></div>
+            <div class="item"><img src="art3.jpg"><h3>Title of Art</h3><p>Medium / Year</p></div>
+            <div class="item"><img src="art4.jpg"><h3>Title of Art</h3><p>Medium / Year</p></div>
+            <div class="item"><img src="art5.jpg"><h3>Title of Art</h3><p>Medium / Year</p></div>
+            <div class="item"><img src="art6.jpg"><h3>Title of Art</h3><p>Medium / Year</p></div>
+            <div class="item"><img src="art7.jpg"><h3>Title of Art</h3><p>Medium / Year</p></div>
+            <div class="item"><img src="art8.jpg"><h3>Title of Art</h3><p>Medium / Year</p></div>
+            <div class="item"><img src="art9.jpg"><h3>Title of Art</h3><p>Medium / Year</p></div>
+            <div class="item"><img src="art10.jpg"><h3>Title of Art</h3><p>Medium / Year</p></div>
+            <div class="item"><img src="art11.jpg"><h3>Title of Art</h3><p>Medium / Year</p></div>
+            <div class="item"><img src="art12.jpg"><h3>Title of Art</h3><p>Medium / Year</p></div>
         </div>
     </div>
 </body>
