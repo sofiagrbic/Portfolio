@@ -6,84 +6,38 @@
     <title>Work | Sofia Grbic</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
     <style>
-        :root { --bg-color: #fcfcfc; --primary-gray: #2d2d2d; --baby-pink: #f9ecec; --soft-green: #e9f0eb; }
-        body { margin: 0; font-family: 'Inter', sans-serif; background: var(--bg-color); color: var(--primary-gray); line-height: 1.6; }
-        nav { padding: 30px 40px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; background: white; z-index: 1000; border-bottom: 1px solid #f0f0f0; }
-        nav a { text-decoration: none; color: var(--primary-gray); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 2px; margin-left: 30px; }
+        :root { --bg: #fcfcfc; --gray: #2d2d2d; --pink: #f9ecec; --green: #e9f0eb; }
+        body { margin: 0; font-family: 'Inter', sans-serif; background: var(--bg); color: var(--gray); line-height: 1.6; }
+        nav { padding: 30px 40px; display: flex; justify-content: space-between; align-items: center; background: white; border-bottom: 1px solid #eee; }
+        nav a { text-decoration: none; color: var(--gray); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 2px; margin-left: 30px; }
         .container { max-width: 900px; margin: 0 auto; padding: 80px 40px; }
         h1 { font-family: 'Playfair Display'; font-style: italic; font-size: 3.5rem; margin-bottom: 10px; }
-        .label { font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; opacity: 0.5; margin-bottom: 40px; display: block; }
-        
-        .section-block { margin-bottom: 100px; }
-        .work-card { background: white; padding: 40px; border: 1px solid #eee; margin-bottom: 30px; transition: 0.4s; }
-        .work-card:hover { border-color: var(--baby-pink); transform: translateY(-5px); }
-        
-        .skills-tag-container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-        .tag { padding: 8px 15px; background: var(--soft-green); font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; }
-        
-        .brand-list { font-family: 'Playfair Display'; font-size: 1.5rem; border-left: 3px solid var(--baby-pink); padding-left: 20px; color: #555; }
+        .card { background: white; padding: 40px; border: 1px solid #eee; margin-bottom: 30px; }
+        .tag { display: inline-block; padding: 8px 15px; background: var(--green); font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; margin: 5px 5px 0 0; }
+        .brand-list { font-family: 'Playfair Display'; font-size: 1.5rem; border-left: 3px solid var(--pink); padding-left: 20px; color: #555; margin-top: 40px; }
     </style>
 </head>
 <body>
     <nav>
         <div style="font-weight: 600; letter-spacing: 2px;">SG</div>
-        <div>
-            <a href="index.html">Home</a>
-            <a href="work.html">Work</a>
-            <a href="atelier.html">Atelier</a>
-            <a href="contact.html">Contact</a>
-        </div>
+        <div><a href="index.html">Home</a><a href="work.html">Work</a><a href="atelier.html">Atelier</a><a href="contact.html">Contact</a></div>
     </nav>
-
     <div class="container">
-        <div class="section-block">
-            <span class="label">Portfolio of Ventures</span>
-            <h1>Strategic Work</h1>
-            <p>A blend of entrepreneurial ownership and corporate brand strategy.</p>
+        <h1>Strategic Work</h1>
+        <div class="card">
+            <h3>Entrepreneurship: Stitched by Sofia</h3>
+            <p>Scaling a DTC brand to 450+ orders. Managing supply chain, machine embroidery, and performance marketing.</p>
+            <div class="tag">Inventory</div><div class="tag">DTC Strategy</div>
         </div>
-
-        <div class="section-block">
-            <div class="work-card">
-                <h3>Stitched by Sofia</h3>
-                <p><strong>DTC Founder | 2021-Present</strong></p>
-                <p>Scaling an embroidery brand from 0 to 450+ orders. I manage everything from machine maintenance and supply chain to TikTok marketing and customer relations.</p>
-                <div class="skills-tag-container">
-                    <div class="tag">Entrepreneurship</div>
-                    <div class="tag">Inventory Strategy</div>
-                    <div class="tag">Social Commerce</div>
-                </div>
-            </div>
-
-            <div class="work-card">
-                <h3>Social Media Strategy</h3>
-                <p><strong>Internship | Chloe Miller (Lovers Counseling, Executive HQ)</strong></p>
-                <p>Leading digital strategy for a couples counseling firm and a career counseling startup. Building content funnels that bridge mental health with professional growth.</p>
-                <div class="skills-tag-container">
-                    <div class="tag">Brand Management</div>
-                    <div class="tag">Content Strategy</div>
-                    <div class="tag">Startup Scaling</div>
-                </div>
-            </div>
+        <div class="card">
+            <h3>Startups: Executive HQ & Social Layer</h3>
+            <p>Leading digital presence and launch strategy for mental health and career coaching startups.</p>
+            <div class="tag">Brand Management</div><div class="tag">Content Strategy</div>
         </div>
-
-        <div class="section-block">
-            <span class="label">Technical Expertise</span>
-            <div class="skills-tag-container">
-                <div class="tag">Advanced Excel</div>
-                <div class="tag">CapCut & TikTok Editing</div>
-                <div class="tag">Canva Pro</div>
-                <div class="tag">HTML/CSS Coding</div>
-                <div class="tag">Strategic Planning</div>
-                <div class="tag">Global Market Analysis</div>
-            </div>
-        </div>
-
-        <div class="section-block">
-            <span class="label">Brand Partners</span>
-            <p class="brand-list">
-                UberOne • Barry's Bootcamp • David Protein • Edikted • Points Chocolate • Prime IV • Moments • UberEats
-            </p>
-        </div>
+        <h2 style="font-family: 'Playfair Display'; margin-top: 60px;">Technical Skills</h2>
+        <div class="tag">Excel</div><div class="tag">CapCut</div><div class="tag">Canva</div><div class="tag">HTML/CSS</div><div class="tag">TikTok Strategy</div>
+        <h2 style="font-family: 'Playfair Display'; margin-top: 60px;">Brand Partners</h2>
+        <p class="brand-list">UberOne • Barry's • David Protein • Edikted • Points Chocolate • Prime IV • UberEats</p>
     </div>
 </body>
 </html>
