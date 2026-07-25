@@ -4,29 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Sofia Grbic</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,400&family=Inter:wght@200;400&display=swap" rel="stylesheet">
     <style>
-        :root { --bg: #fcfcfc; --gray: #2d2d2d; --pink: #f9ecec; }
-        body { margin: 0; font-family: 'Inter', sans-serif; background: var(--bg); color: var(--gray); text-align: center; }
-        nav { padding: 30px 40px; display: flex; justify-content: space-between; align-items: center; background: white; border-bottom: 1px solid #eee; }
-        nav a { text-decoration: none; color: var(--gray); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 2px; margin-left: 30px; }
+        :root { --bg: #fdfaf6; --pink: #d4a3a3; --gray: #2d2d2d; }
+        body { margin: 0; background: var(--bg); color: var(--gray); font-family: 'Inter', sans-serif; text-align: center; }
+        nav { padding: 40px; display: flex; justify-content: space-between; border-bottom: 1px solid #eee; }
+        nav a { text-decoration: none; color: #2d2d2d; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 3px; margin-left: 30px; }
         .container { max-width: 600px; margin: 100px auto; padding: 0 40px; }
-        h1 { font-family: 'Playfair Display'; font-style: italic; font-size: 4rem; }
-        .link { display: block; margin: 20px 0; font-size: 1.2rem; color: var(--gray); text-decoration: none; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
-        .btn { display: inline-block; padding: 20px 50px; background: var(--gray); color: white; text-decoration: none; margin-top: 40px; letter-spacing: 2px; font-weight: 600; font-size: 0.8rem; }
+        h1 { font-family: 'Bodoni Moda'; font-style: italic; font-size: 4rem; color: var(--pink); }
+        .link { display: block; margin: 30px 0; font-size: 1rem; color: var(--gray); text-decoration: none; border-bottom: 1px solid #ddd; padding-bottom: 10px; letter-spacing: 2px; }
+        .link:hover { color: var(--pink); border-color: var(--pink); }
+        .resume-btn { display: inline-block; padding: 25px 60px; background: var(--gray); color: white; text-decoration: none; margin-top: 50px; letter-spacing: 3px; font-weight: 600; font-size: 0.8rem; transition: 0.3s; }
+        .resume-btn:hover { background: var(--pink); }
     </style>
 </head>
 <body>
     <nav>
-        <div style="font-weight: 600; letter-spacing: 2px;">SG</div>
+        <div style="font-family: 'Bodoni Moda'; font-style: italic; font-size: 1.2rem;">SG</div>
         <div><a href="index.html">Home</a><a href="work.html">Work</a><a href="atelier.html">Atelier</a><a href="contact.html">Contact</a></div>
     </nav>
     <div class="container">
+        <p style="text-transform: uppercase; letter-spacing: 5px; font-size: 0.7rem; opacity: 0.5;">Inquiries</p>
         <h1>Let's Connect</h1>
         <a href="mailto:sofia.grbic@colorado.edu" class="link">Email</a>
         <a href="https://linkedin.com/in/sofiagrbic" class="link" target="_blank">LinkedIn</a>
-        <a href="https://instagram.com/stitchedbysofia" class="link" target="_blank">Instagram</a>
-        <a href="resume.pdf" class="btn" target="_blank">VIEW MY RESUME</a>
+        <a href="https://instagram.com/stitchedbysofia" class="link" target="_blank">@stitchedbysofia</a>
+        <a href="https://instagram.com/your-personal-handle" class="link" target="_blank">Personal Instagram</a>
+        <a href="https://instagram.com/your-drawing-handle" class="link" target="_blank">Art & Illustration</a>
+        
+        <a href="resume.pdf" class="resume-btn" target="_blank">DOWNLOAD RESUME</a>
     </div>
 </body>
 </html>
