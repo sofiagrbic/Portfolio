@@ -7,36 +7,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Bodoni+Moda:ital,wght@0,400;1,400&family=Inter:wght@300;600&display=swap" rel="stylesheet">
     <style>
         :root { 
-            --bg: #fdfaf6; /* Champagne */
-            --pink: #d4a3a3; /* Dusty Rose */
-            --green: #8da399; /* Muted Sage */
+            --bg: #fdfaf6; 
+            --pink: #d4a3a3; 
+            --green: #8da399; 
             --text: #2d2d2d;
             --fade: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
         }
 
         body { margin: 0; background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; overflow-x: hidden; }
         
-        /* Navigation */
         nav { padding: 40px; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; box-sizing: border-box; z-index: 1000; mix-blend-mode: multiply; }
         nav a { text-decoration: none; color: var(--text); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 3px; margin-left: 30px; transition: 0.3s; }
         nav a:hover { color: var(--pink); font-style: italic; }
 
-        /* Hero Section */
-        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(253,250,246,0.5), rgba(253,250,246,0.5)), url('business.jpg'); background-size: cover; background-position: center; }
+        /* HERO - Now using tree.jpg */
+        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(253,250,246,0.3), rgba(253,250,246,0.3)), url('tree.jpg'); background-size: cover; background-position: center; }
         .hero-name { font-family: 'Pinyon Script', cursive; font-size: clamp(5rem, 15vw, 12rem); color: var(--pink); margin: 0; line-height: 0.8; transition: var(--fade); cursor: default; }
         .hero-name:hover { transform: scale(1.05); text-shadow: 0 0 20px rgba(212,163,163,0.3); }
         .hero-sub { font-family: 'Bodoni Moda', serif; font-style: italic; letter-spacing: 5px; text-transform: uppercase; font-size: 0.9rem; margin-top: 20px; opacity: 0.8; }
 
-        /* About Section */
         .about { padding: 150px 10%; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
         .about-img { width: 100%; aspect-ratio: 4/5; object-fit: cover; border: 15px solid white; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
         .about-text h2 { font-family: 'Bodoni Moda', serif; font-size: 3rem; font-style: italic; margin-bottom: 30px; color: var(--green); }
         .about-text p { font-size: 1.1rem; line-height: 1.8; font-weight: 300; }
 
-        /* Social Icons */
-        .socials { margin-top: 40px; }
-        .socials a { color: var(--text); margin-right: 20px; text-decoration: none; font-size: 0.8rem; border: 1px solid var(--text); padding: 10px 20px; border-radius: 50px; transition: 0.3s; }
-        .socials a:hover { background: var(--pink); color: white; border-color: var(--pink); }
+        /* Social Link Styling */
+        .social-cluster { margin-top: 40px; display: flex; flex-direction: column; gap: 15px; }
+        .social-link { color: var(--text); text-decoration: none; font-size: 0.8rem; border-bottom: 1px solid transparent; padding-bottom: 5px; width: fit-content; transition: 0.3s; letter-spacing: 1px;}
+        .social-link:hover { border-color: var(--pink); color: var(--pink); }
 
         footer { padding: 100px 0; text-align: center; font-size: 0.6rem; letter-spacing: 4px; opacity: 0.5; }
     </style>
@@ -62,15 +60,18 @@
         <img src="me.jpg" alt="Sofia Grbic" class="about-img">
         <div class="about-text">
             <h2>The Visionary</h2>
-            <p>I am a senior at the Leeds School of Business, graduating December 2026. My work is a dialogue between strategic discipline and creative freedom. From scaling <i>Stitched by Sofia</i> to architecting digital presence for emerging startups, I believe business should be as striking as art.</p>
-            <div class="socials">
-                <a href="https://instagram.com/stitchedbysofia" target="_blank">Instagram</a>
-                <a href="https://linkedin.com/in/sofiagrbic" target="_blank">LinkedIn</a>
+            <p>I am a senior at the Leeds School of Business, graduating December 2026. My work is a dialogue between strategic discipline and creative freedom. I believe business should be as striking as art.</p>
+            
+            <div class="social-cluster">
+                <a href="mailto:sofia.grbic@colorado.edu" class="social-link">Email</a>
+                <a href="https://linkedin.com/in/sofiagrbic" class="social-link" target="_blank">LinkedIn</a>
+                <a href="https://instagram.com/stitchedbysofia" class="social-link" target="_blank">Brand Instagram — @stitchedbysofia</a>
+                <a href="https://instagram.com/your-personal-handle" class="social-link" target="_blank">Personal Instagram</a>
+                <a href="https://instagram.com/your-drawing-handle" class="social-link" target="_blank">Art Instagram</a>
             </div>
         </div>
     </section>
 
     <footer>&copy; 2026 SOFIA GRBIC • CINEMATIC STRATEGY</footer>
-
 </body>
 </html>
