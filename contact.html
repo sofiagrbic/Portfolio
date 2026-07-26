@@ -6,41 +6,29 @@
     <title>Contact | Sofia Grbic</title>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        :root { --bg: #fdfcf0; --pink: #ff9fb2; --green: #7eb356; --gray: #1a1a1a; }
-        body { margin: 0; background: var(--bg); color: var(--gray); font-family: 'Inter', sans-serif; text-align: center; }
-        nav { padding: 40px; display: flex; justify-content: space-between; border-bottom: 1px solid #eee; background: white; }
-        nav a { text-decoration: none; color: var(--gray); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 3px; margin-left: 30px; font-weight: 600; }
-        
+        :root { --bg: #fdfcf0; --pink: #dfb4c6; --sage: #8a8c2b; --dark: #1a1a1a; }
+        body { margin: 0; background: var(--bg); color: var(--dark); font-family: 'Inter', sans-serif; text-align: center; }
+        nav { padding: 20px; display: flex; justify-content: center; gap: 30px; background: var(--sage); position: sticky; top: 0; z-index: 10000; }
+        nav a { text-decoration: none; color: white; font-weight: 600; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; }
         .container { max-width: 600px; margin: 100px auto; padding: 0 40px; }
         h1 { font-family: 'Bodoni Moda'; font-style: italic; font-size: 4.5rem; color: var(--pink); margin-bottom: 50px; }
-        
-        .link { display: block; margin: 30px 0; font-size: 1.1rem; color: var(--gray); text-decoration: none; border-bottom: 1px solid #ddd; padding-bottom: 10px; letter-spacing: 2px; transition: 0.3s; font-weight: 400; }
-        .link:hover { color: var(--green); border-color: var(--green); transform: translateX(5px); font-style: italic; }
-        .link:active { transform: scale(0.95); }
-
-        .resume-btn { 
-            display: inline-block; padding: 25px 60px; background: var(--gray); color: white; text-decoration: none; margin-top: 50px; 
-            letter-spacing: 3px; font-weight: 600; font-size: 0.8rem; transition: all 0.4s; 
-        }
-        .resume-btn:hover { background: var(--green); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(126, 179, 86, 0.2); }
-        .resume-btn:active { transform: translateY(0) scale(0.95); }
+        .link { display: block; margin: 30px 0; font-size: 1.1rem; color: var(--dark); text-decoration: none; border-bottom: 1px solid #ddd; padding-bottom: 10px; transition: 0.3s; }
+        .link:hover { color: var(--sage); border-color: var(--sage); transform: translateX(10px); }
+        .resume-btn { display: inline-block; padding: 25px 60px; background: var(--dark); color: white; text-decoration: none; margin-top: 50px; letter-spacing: 3px; font-weight: 600; transition: 0.4s; }
+        .resume-btn:hover { background: var(--pink); transform: translateY(-5px); }
     </style>
 </head>
 <body>
     <nav>
-        <div style="font-family: 'Bodoni Moda'; font-style: italic; font-size: 1.2rem;">SG</div>
-        <div><a href="index.html">Home</a><a href="work.html">Work</a><a href="atelier.html">Atelier</a><a href="contact.html">Contact</a></div>
+        <a href="index.html">Home</a><a href="index.html#about">About Me</a><a href="work.html">Experience</a><a href="atelier.html">Original Works</a><a href="contact.html">Contact Me</a>
     </nav>
     <div class="container">
-        <p style="text-transform: uppercase; letter-spacing: 5px; font-size: 0.7rem; opacity: 0.5;">Inquiries</p>
         <h1>Let's Connect</h1>
-
-        <a href="mailto:Sofiamgrbic@gmail.com" class="link">Email — Sofiamgrbic@gmail.com</a>
-        <a href="https://www.linkedin.com/in/sofia-grbic" class="link" target="_blank">LinkedIn - @Sofia-Grbic</a>
-        <a href="https://www.instagram.com/StiitchedbySofia" class="link" target="_blank">Brand — @StiitchedbySofia</a>
-        <a href="https://www.instagram.com/SofiaGrbic" class="link" target="_blank">Personal — @SofiaGrbic</a>
-        <a href="https://www.instagram.com/SketchedbySofia" class="link" target="_blank">Art — @SketchedbySofia</a>
-        
+        <a href="mailto:Sofiamgrbic@gmail.com" class="link">Sofiamgrbic@gmail.com</a>
+        <a href="https://www.linkedin.com/in/sofia-grbic" class="link" target="_blank">LinkedIn</a>
+        <a href="https://www.instagram.com/StiitchedbySofia" class="link" target="_blank">@StiitchedbySofia</a>
+        <a href="https://www.instagram.com/SofiaGrbic" class="link" target="_blank">@SofiaGrbic</a>
+        <a href="https://www.instagram.com/SketchedbySofia" class="link" target="_blank">@SketchedbySofia</a>
         <a href="resume.pdf" class="resume-btn" target="_blank">VIEW FULL RESUME</a>
     </div>
 </body>
