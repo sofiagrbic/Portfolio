@@ -8,33 +8,27 @@
     <style>
         :root { --bg: #fdfcf0; --pink: #dfb4c6; --sage: #8a8c2b; --dark: #4e5f3b; --beige: #f8f4eb; }
         body { margin: 0; background: var(--bg); font-family: 'Inter', sans-serif; color: var(--dark); }
-        nav { padding: 20px; display: flex; justify-content: center; gap: 30px; background: var(--sage); position: sticky; top: 0; z-index: 1000; }
-        nav a { text-decoration: none; color: white; font-weight: 600; font-size: 0.8rem; }
-        .container { max-width: 1100px; margin: 80px auto; padding: 40px; }
-        
+        nav { padding: 20px; display: flex; justify-content: center; gap: 25px; background: var(--sage); position: sticky; top: 0; z-index: 1000; }
+        nav a { text-decoration: none; color: white; font-weight: 600; font-size: 0.75rem; text-transform: uppercase; }
+        .container { max-width: 1100px; margin: 60px auto; padding: 40px; }
         .exp-section { margin-bottom: 120px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .exp-text { padding: 40px; background: var(--beige); border-left: 5px solid var(--pink); }
+        .exp-text { padding: 40px; background: var(--beige); border-left: 5px solid var(--pink); box-shadow: 5px 5px 15px rgba(0,0,0,0.02); }
         .exp-collage { width: 100%; border: 10px solid white; box-shadow: 10px 10px 30px rgba(0,0,0,0.1); }
-        
-        h2 { font-family: 'Pinyon Script'; font-size: 4rem; color: var(--dark); margin: 0; }
-        h3 { font-family: 'Bodoni Moda'; font-style: italic; font-size: 1.8rem; margin-top: 10px; }
-
-        .brand-wall { text-align: center; margin-top: 100px; padding: 60px; background: var(--dark); color: white; }
-        .brand-collage { width: 100%; max-width: 1000px; margin-top: 40px; border: 15px solid white; }
-
+        h2 { font-family: 'Pinyon Script'; font-size: 4.5rem; color: var(--dark); margin: 0; line-height: 1; }
+        h3 { font-family: 'Bodoni Moda'; font-style: italic; font-size: 1.5rem; margin-top: 10px; opacity: 0.7; }
+        p { line-height: 1.7; font-size: 0.95rem; }
+        .brand-wall { text-align: center; background: var(--dark); color: white; padding: 80px 40px; margin-top: 50px; }
         @media (max-width: 900px) { .exp-section { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a><a href="work.html">Experience</a><a href="atelier.html">Original Works</a><a href="contact.html">Contact Me</a>
-    </nav>
+    <nav><a href="index.html">Home</a><a href="work.html">Experience</a><a href="stitched.html">Stitched by Sofia</a><a href="atelier.html">Original Works</a><a href="contact.html">Contact Me</a></nav>
     <div class="container">
         <!-- Social Layer -->
         <div class="exp-section">
             <div class="exp-text">
-                <h2>Social Layer.</h2>
-                <p>Leading creative strategy and social media content across multiple brands by developing campaign concepts and engaging digital storytelling.</p>
+                <h2>social layer.</h2>
+                <p>Leading creative strategy and social media content across multiple brands by developing campaign concepts, planning content, interviewing talent, and collaborating with editors to create engaging digital storytelling. Spear-heading efforts to make social media a more positive, healthy, and unfiltered experience.</p>
             </div>
             <img src="sl_collage.jpg" class="exp-collage">
         </div>
@@ -43,16 +37,33 @@
         <div class="exp-section">
             <img src="lc_collage.jpg" class="exp-collage">
             <div class="exp-text">
-                <h2>Lovers Counseling</h2>
-                <p>As Creative Strategy Lead, I helped transform mental health conversations into approachable brand messaging.</p>
+                <h2>lovers counseling</h2>
+                <p>Leading a team as Creative Strategy Lead, I helped transform meaningful mental health conversations into engaging social media through strategic storytelling, educational content, interviews, and brand messaging that made therapy feel more approachable, authentic, and accessible.</p>
             </div>
         </div>
 
-        <!-- Ambassadorship Section -->
+        <!-- Executive HQ -->
+        <div class="exp-section">
+            <div class="exp-text">
+                <h2>executive HQ</h2>
+                <p>Developed founder-focused content strategies that strengthened Executive HQ's personal brand through educational storytelling, interviews, thought leadership, and community-driven social media campaigns. Leading a team of four as the Creative Strategy Lead.</p>
+            </div>
+            <img src="eh_collage.jpg" class="exp-collage">
+        </div>
+
+        <!-- TDPT -->
+        <div class="exp-section">
+            <img src="td_collage.jpg" class="exp-collage">
+            <div class="exp-text">
+                <h2>thera-dynamics</h2>
+                <p>Developed a comprehensive social media growth strategy for Thera-Dynamics Physical Therapy, including market research, brand positioning, visual identity, content systems, and platform planning. Created a long-term roadmap to build community awareness, patient trust, and digital leadership in Milwaukee.</p>
+            </div>
+        </div>
+
         <div class="brand-wall">
-            <h2 style="color: white;">Brand Ambassadorships</h2>
-            <p style="letter-spacing: 2px;">Barry's • Moments • UberOne • David Protein • Edikted</p>
-            <img src="brands_collage.jpg" class="brand-collage">
+            <h2 style="color: white; font-size: 3rem;">Ambassadorships</h2>
+            <p>Barry's • Moments • UberOne • David Protein • Edikted • Points Chocolate • UberEats</p>
+            <img src="brands_collage.jpg" style="width: 100%; border: 15px solid white; margin-top: 30px;">
         </div>
     </div>
 </body>
