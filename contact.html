@@ -8,17 +8,19 @@
     <style>
         :root { --bg: #fdfcf0; --pink: #dfb4c6; --sage: #8a8c2b; --dark: #1a1a1a; }
         body { margin: 0; background: var(--bg); color: var(--dark); font-family: 'Inter', sans-serif; text-align: center; }
-        nav { padding: 20px; display: flex; justify-content: center; gap: 30px; background: var(--sage); }
-        nav a { text-decoration: none; color: white; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; }
+        nav { padding: 20px; display: flex; justify-content: center; gap: 25px; background: var(--sage); position: sticky; top: 0; z-index: 1000; }
+        nav a { text-decoration: none; color: white; font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; }
         .container { max-width: 700px; margin: 100px auto; padding: 0 40px; }
-        h1 { font-family: 'Bodoni Moda'; font-style: italic; font-size: 4.5rem; color: var(--pink); }
+        h1 { font-family: 'Bodoni Moda'; font-style: italic; font-size: 4.5rem; color: var(--pink); margin-bottom: 50px; }
         .link { display: block; margin: 25px 0; font-size: 1.1rem; color: var(--dark); text-decoration: none; border-bottom: 1px solid #ddd; padding-bottom: 10px; transition: 0.3s; }
-        .link:hover { color: var(--sage); border-color: var(--sage); padding-left: 10px; }
+        .link:hover { color: var(--sage); border-color: var(--sage); padding-left: 10px; font-style: italic; }
+        .resume-btn { display: inline-block; padding: 25px 60px; background: var(--dark); color: white; text-decoration: none; margin-top: 50px; letter-spacing: 3px; font-weight: 600; transition: 0.4s; }
+        .resume-btn:hover { background: var(--pink); transform: translateY(-5px); }
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a><a href="work.html">Experience</a><a href="atelier.html">Original Works</a><a href="contact.html">Contact Me</a>
+        <a href="index.html">Home</a><a href="work.html">Experience</a><a href="stitched.html">Stitched by Sofia</a><a href="atelier.html">Original Works</a><a href="contact.html">Contact Me</a>
     </nav>
     <div class="container">
         <h1>Let's Connect</h1>
@@ -27,8 +29,7 @@
         <a href="https://www.instagram.com/StiitchedbySofia" class="link" target="_blank">Brand Instagram: @StiitchedbySofia</a>
         <a href="https://www.instagram.com/SofiaGrbic" class="link" target="_blank">Personal Instagram: @SofiaGrbic</a>
         <a href="https://www.instagram.com/SketchedbySofia" class="link" target="_blank">Art Instagram: @SketchedbySofia</a>
-        
-        <a href="resume.pdf" style="display:inline-block; padding:20px 50px; background:var(--dark); color:white; text-decoration:none; margin-top:40px; font-weight:600;">VIEW FULL RESUME</a>
+        <a href="resume.pdf" class="resume-btn" target="_blank">VIEW FULL RESUME</a>
     </div>
 </body>
 </html>
