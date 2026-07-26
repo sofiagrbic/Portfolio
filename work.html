@@ -6,70 +6,47 @@
     <title>Experience | Sofia Grbic</title>
     <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Bodoni+Moda:ital,wght@1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        :root { --bg: #fdfcf0; --pink: #ff9fb2; --green: #7eb356; --text: #1a1a1a; }
-        body { background: url('tree.jpg'); background-size: cover; background-attachment: fixed; margin: 0; font-family: 'Inter', sans-serif; }
+        :root { --bg: #fdfcf0; --pink: #dfb4c6; --sage: #8a8c2b; --dark: #4e5f3b; --beige: #f8f4eb; }
+        body { margin: 0; background: var(--bg); font-family: 'Inter', sans-serif; }
+        nav { padding: 20px; display: flex; justify-content: center; gap: 30px; background: var(--sage); position: sticky; top: 0; z-index: 1000; }
+        nav a { text-decoration: none; color: white; font-weight: 600; font-size: 0.8rem; letter-spacing: 1px; }
         
-        nav { padding: 20px; display: flex; justify-content: center; gap: 20px; background: rgba(126, 179, 86, 0.9); position: sticky; top: 0; z-index: 1000; }
-        nav a { text-decoration: none; color: white; font-size: 0.85rem; }
-
-        .container { max-width: 1100px; margin: 50px auto; padding: 40px; background: rgba(253, 252, 240, 0.8); backdrop-filter: blur(10px); }
-        
-        .header-box { background: var(--green); color: white; padding: 15px 40px; display: inline-block; margin-bottom: 20px; }
+        .container { max-width: 1100px; margin: 80px auto; padding: 40px; }
+        .header-box { background: var(--dark); color: white; padding: 15px 50px; display: inline-block; margin-bottom: 20px; }
         h1 { font-family: 'Pinyon Script'; font-size: 5rem; margin: 0; }
 
-        .experience-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 50px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-top: 60px; }
+        .card { background: var(--beige); padding: 40px; position: relative; border: 1px solid #eee; transition: 0.4s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 10px 10px 0px var(--pink); }
         
-        .exp-card { 
-            background: #f8f1e3; padding: 30px; position: relative; 
-            transition: 0.4s; border: 1px solid #ddd;
-        }
-        .exp-card:hover { transform: scale(1.02) rotate(1deg); box-shadow: 10px 10px 0px var(--pink); }
-        
-        .logo-sticker { 
-            position: absolute; top: -30px; right: -20px; 
-            width: 100px; height: 100px; background: white; 
-            padding: 10px; border: 4px solid white; box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
-            transform: rotate(-10deg);
-        }
-
-        h3 { font-family: 'Bodoni Moda'; font-style: italic; color: #444; }
+        .card h3 { font-family: 'Bodoni Moda'; font-style: italic; font-size: 1.6rem; color: var(--dark); margin-bottom: 15px; }
+        .card p { line-height: 1.7; color: #444; font-size: 0.95rem; }
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="work.html">Experience</a>
-        <a href="atelier.html">Projects</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html">Home</a><a href="index.html#about">About Me</a><a href="work.html">Experience</a><a href="atelier.html">Original Works</a><a href="contact.html">Contact Me</a>
     </nav>
-
     <div class="container">
         <div class="header-box"><h1>Experience</h1></div>
-        <p style="text-transform: uppercase; letter-spacing: 3px; font-weight: 700;">Brands I've Worked For</p>
+        <p style="text-transform: uppercase; letter-spacing: 4px; font-weight: 700; color: var(--dark);">Brands I've Worked For</p>
 
-        <div class="experience-grid">
-            <div class="exp-card">
-                <div class="logo-sticker"><img src="sociallayer_logo.png" width="100%"></div>
-                <h3>Social Layer</h3>
-                <p>Leading creative strategy and social media content across multiple brands. Spearheading efforts to make social media a more positive, unfiltered experience.</p>
+        <div class="grid">
+            <div class="card">
+                <h3>Social Layer.</h3>
+                <p>Leading creative strategy and social media content across multiple brands by developing campaign concepts, planning content, interviewing talent, and collaborating with editors to create engaging digital storytelling. Spear-heading efforts to make social media a more positive, healthy, and unfiltered experience.</p>
             </div>
-
-            <div class="exp-card">
-                <div class="logo-sticker"><img src="exec_logo.png" width="100%"></div>
-                <h3>Executive HQ</h3>
-                <p>Developing founder-focused content strategies that strengthened Executive HQ's personal brand through educational storytelling.</p>
-            </div>
-
-            <div class="exp-card">
-                <div class="logo-sticker"><img src="lovers_logo.png" width="100%"></div>
+            <div class="card">
                 <h3>Lovers Counseling</h3>
-                <p>Transforming mental health conversations into engaging social media through strategic storytelling and brand messaging.</p>
+                <p>Leading a team as Creative Strategy Lead, I helped transform meaningful mental health conversations into engaging social media through strategic storytelling, educational content, interviews, and brand messaging that made therapy feel more approachable, authentic, and accessible.</p>
             </div>
-
-            <div class="exp-card">
-                <div class="logo-sticker"><img src="tdpt_logo.png" width="100%"></div>
+            <div class="card">
+                <h3>Executive HQ</h3>
+                <p>Developed founder-focused content strategies that strengthened Executive HQ's personal brand through educational storytelling, interviews, thought leadership, and community-driven social media campaigns. Leading a team of four as the Creative Strategy Lead.</p>
+            </div>
+            <div class="card">
                 <h3>Thera-Dynamics</h3>
-                <p>Developed a comprehensive social media growth strategy, including market research, brand positioning, and platform planning.</p>
+                <p>Developed a comprehensive social media growth strategy for Thera-Dynamics Physical Therapy, including market research, brand positioning, visual identity, content systems, and platform planning. Created a long-term roadmap to build community awareness, patient trust, and digital leadership in Milwaukee.</p>
             </div>
         </div>
     </div>
