@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stitched by Sofia | Brand</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Bodoni+Moda:ital,wght@1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #fdfcf0; --pink: #dfb4c6; --sage: #8a8c2b; --dark: #4e5f3b; --beige: #f8f4eb; }
+        body { margin: 0; background: var(--bg); font-family: 'Inter', sans-serif; color: var(--dark); }
+        nav { padding: 20px; display: flex; justify-content: center; gap: 25px; background: var(--sage); position: sticky; top: 0; z-index: 1000; }
+        nav a { text-decoration: none; color: white; font-weight: 600; font-size: 0.75rem; text-transform: uppercase; }
+        .header { height: 60vh; background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('stitched_hero.jpg'); background-size: cover; background-position: center; display: flex; justify-content: center; align-items: center; text-align: center; }
+        .header h1 { font-family: 'Pinyon Script'; font-size: 7rem; color: white; margin: 0; }
+        .container { max-width: 1100px; margin: 80px auto; padding: 40px; text-align: center; }
+        .blurb-box { background: var(--beige); padding: 80px 10%; box-shadow: 10px 10px 0px var(--pink); margin-bottom: 80px; }
+        p { line-height: 2; font-size: 1.1rem; text-align: left; }
+        .collage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .collage { width: 100%; border: 15px solid white; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transform: rotate(-2deg); transition: 0.4s; }
+        .collage:nth-child(even) { transform: rotate(2deg); }
+        .collage:hover { transform: rotate(0) scale(1.02); }
+    </style>
+</head>
+<body>
+    <nav><a href="index.html">Home</a><a href="work.html">Experience</a><a href="stitched.html">Stitched by Sofia</a><a href="atelier.html">Original Works</a><a href="contact.html">Contact Me</a></nav>
+    <div class="header"><h1>Stitched by Sofia</h1></div>
+    <div class="container">
+        <div class="blurb-box">
+            <p>From my junior year in highschool back in 2021, I started <b>Stitched by Sofia</b> as a creative outlet. It quickly became my first experience building a business from scratch. Now, we have shipped over 460 orders to 42 states and 5 countries.</p>
+            <p>From designing custom embroidery pieces to managing branding, customer communication, product photography, pricing, and fulfillment, I learned what it takes to turn an idea into something people genuinely value.</p>
+            <p>More than anything, this experience taught me how creativity and business go hand in hand. It challenged me to think like both an artist and an entrepreneur—an approach I still bring to every project I work on today.</p>
+        </div>
+        <div class="collage-grid">
+            <img src="stitched1.jpg" class="collage">
+            <img src="stitched2.jpg" class="collage">
+            <img src="stitched3.jpg" class="collage">
+            <img src="stitched4.jpg" class="collage">
+        </div>
+    </div>
+</body>
+</html>
