@@ -3,48 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work | Sofia Grbic</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
+    <title>Experience | Sofia Grbic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Bodoni+Moda:ital,wght@1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        :root { 
-            --bg: #fdfcf0; 
-            --pink: #ff9fb2; 
-            --green: #7eb356; 
-            --text: #1a1a1a; 
-            --white: #fffcf9;
-            --fade: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+        :root { --bg: #fdfcf0; --pink: #ff9fb2; --green: #7eb356; --text: #1a1a1a; }
+        body { background: url('tree.jpg'); background-size: cover; background-attachment: fixed; margin: 0; font-family: 'Inter', sans-serif; }
+        
+        nav { padding: 20px; display: flex; justify-content: center; gap: 20px; background: rgba(126, 179, 86, 0.9); position: sticky; top: 0; z-index: 1000; }
+        nav a { text-decoration: none; color: white; font-size: 0.85rem; }
+
+        .container { max-width: 1100px; margin: 50px auto; padding: 40px; background: rgba(253, 252, 240, 0.8); backdrop-filter: blur(10px); }
+        
+        .header-box { background: var(--green); color: white; padding: 15px 40px; display: inline-block; margin-bottom: 20px; }
+        h1 { font-family: 'Pinyon Script'; font-size: 5rem; margin: 0; }
+
+        .experience-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 50px; }
+        
+        .exp-card { 
+            background: #f8f1e3; padding: 30px; position: relative; 
+            transition: 0.4s; border: 1px solid #ddd;
         }
-        body { margin: 0; font-family: 'Inter', sans-serif; background: var(--bg); color: var(--gray); line-height: 1.6; }
-        nav { padding: 30px 40px; display: flex; justify-content: space-between; align-items: center; background: white; border-bottom: 1px solid #eee; }
-        nav a { text-decoration: none; color: var(--gray); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 2px; margin-left: 30px; }
-        .container { max-width: 900px; margin: 0 auto; padding: 80px 40px; }
-        h1 { font-family: 'Playfair Display'; font-style: italic; font-size: 3.5rem; margin-bottom: 10px; }
-        .card { background: white; padding: 40px; border: 1px solid #eee; margin-bottom: 30px; }
-        .tag { display: inline-block; padding: 8px 15px; background: var(--green); font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; margin: 5px 5px 0 0; }
-        .brand-list { font-family: 'Playfair Display'; font-size: 1.5rem; border-left: 3px solid var(--pink); padding-left: 20px; color: #555; margin-top: 40px; }
+        .exp-card:hover { transform: scale(1.02) rotate(1deg); box-shadow: 10px 10px 0px var(--pink); }
+        
+        .logo-sticker { 
+            position: absolute; top: -30px; right: -20px; 
+            width: 100px; height: 100px; background: white; 
+            padding: 10px; border: 4px solid white; box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+            transform: rotate(-10deg);
+        }
+
+        h3 { font-family: 'Bodoni Moda'; font-style: italic; color: #444; }
     </style>
 </head>
 <body>
     <nav>
-        <div style="font-weight: 600; letter-spacing: 2px;">SG</div>
-        <div><a href="index.html">Home</a><a href="work.html">Work</a><a href="atelier.html">Atelier</a><a href="contact.html">Contact</a></div>
+        <a href="index.html">Home</a>
+        <a href="work.html">Experience</a>
+        <a href="atelier.html">Projects</a>
+        <a href="contact.html">Contact</a>
     </nav>
+
     <div class="container">
-        <h1>Strategic Work</h1>
-        <div class="card">
-            <h3>Entrepreneurship: Stitched by Sofia</h3>
-            <p>Scaling a DTC brand to 450+ orders. Managing supply chain, machine embroidery, and performance marketing.</p>
-            <div class="tag">Inventory</div><div class="tag">DTC Strategy</div>
+        <div class="header-box"><h1>Experience</h1></div>
+        <p style="text-transform: uppercase; letter-spacing: 3px; font-weight: 700;">Brands I've Worked For</p>
+
+        <div class="experience-grid">
+            <div class="exp-card">
+                <div class="logo-sticker"><img src="sociallayer_logo.png" width="100%"></div>
+                <h3>Social Layer</h3>
+                <p>Leading creative strategy and social media content across multiple brands. Spearheading efforts to make social media a more positive, unfiltered experience.</p>
+            </div>
+
+            <div class="exp-card">
+                <div class="logo-sticker"><img src="exec_logo.png" width="100%"></div>
+                <h3>Executive HQ</h3>
+                <p>Developing founder-focused content strategies that strengthened Executive HQ's personal brand through educational storytelling.</p>
+            </div>
+
+            <div class="exp-card">
+                <div class="logo-sticker"><img src="lovers_logo.png" width="100%"></div>
+                <h3>Lovers Counseling</h3>
+                <p>Transforming mental health conversations into engaging social media through strategic storytelling and brand messaging.</p>
+            </div>
+
+            <div class="exp-card">
+                <div class="logo-sticker"><img src="tdpt_logo.png" width="100%"></div>
+                <h3>Thera-Dynamics</h3>
+                <p>Developed a comprehensive social media growth strategy, including market research, brand positioning, and platform planning.</p>
+            </div>
         </div>
-        <div class="card">
-            <h3>Startups: Executive HQ & Social Layer</h3>
-            <p>Leading digital presence and launch strategy for mental health and career coaching startups.</p>
-            <div class="tag">Brand Management</div><div class="tag">Content Strategy</div>
-        </div>
-        <h2 style="font-family: 'Playfair Display'; margin-top: 60px;">Technical Skills</h2>
-        <div class="tag">Excel</div><div class="tag">CapCut</div><div class="tag">Canva</div><div class="tag">HTML/CSS</div><div class="tag">TikTok Strategy</div>
-        <h2 style="font-family: 'Playfair Display'; margin-top: 60px;">Brand Partners</h2>
-        <p class="brand-list">UberOne • Barry's • David Protein • Edikted • Points Chocolate • Prime IV • UberEats</p>
     </div>
 </body>
 </html>
