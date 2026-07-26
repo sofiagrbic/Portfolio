@@ -3,116 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atelier | Sofia Grbic</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,400;1,700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>Original Works | Sofia Grbic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,400;1,700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        :root { 
-            --bg: #fdfcf0; 
-            --pink: #ff9fb2; 
-            --green: #7eb356; 
-            --text: #1a1a1a; 
-        }
-        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; padding-bottom: 100px; }
-        
-        nav { padding: 40px; display: flex; justify-content: space-between; position: sticky; top: 0; background: rgba(253, 252, 240, 0.98); z-index: 1000; border-bottom: 1px solid #eee; }
-        nav a { text-decoration: none; color: var(--text); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 3px; margin-left: 30px; transition: 0.3s; font-weight: 600; }
-        nav a:hover { color: var(--pink); }
-
-        .container { max-width: 1200px; margin: 60px auto; padding: 0 40px; }
-        h1 { font-family: 'Bodoni Moda'; font-style: italic; font-size: clamp(3rem, 8vw, 5rem); text-align: center; margin-bottom: 80px; color: var(--green); }
-
-        .scrapbook { 
-            display: block;
-            column-count: 3; 
-            column-gap: 40px; 
-        }
-
-        .scrapbook-item { 
-            display: inline-block; /* Essential for Masonry */
-            width: 100%;
-            margin-bottom: 60px; 
-            background: white; 
-            padding: 15px; 
-            box-shadow: 10px 15px 40px rgba(0,0,0,0.08); 
-            transition: all 0.5s ease;
-            position: relative;
-            box-sizing: border-box;
-        }
-
-        /* SPRING TAPE */
-        .scrapbook-item::before {
-            content: ""; position: absolute; top: -12px; left: 50%; transform: translateX(-50%) rotate(-3deg);
-            width: 80px; height: 25px; background: rgba(255, 159, 178, 0.6); z-index: 2;
-        }
-        .scrapbook-item:nth-child(even)::before { background: rgba(126, 179, 86, 0.6); }
-
-        .scrapbook-item:nth-child(odd) { transform: rotate(-1deg); }
-        .scrapbook-item:nth-child(even) { transform: rotate(1deg); }
-
-        .scrapbook-item:hover { transform: rotate(0deg) scale(1.03); z-index: 10; }
-
-        .scrapbook-item img { width: 100%; height: auto; display: block; margin-bottom: 20px; }
-
-        /* THE TEXT AREA - FORCED VISIBILITY */
-        .art-info { 
-            padding: 20px 10px; 
-            background: #fff; 
-            border-top: 2px solid var(--bg);
-            text-align: center;
-            display: block !important; /* Forces it to show */
-            min-height: 80px;
-        }
-        
-        .art-info h3 { 
-            font-family: 'Bodoni Moda', serif; 
-            font-style: italic; 
-            font-size: 1.6rem; 
-            margin: 0 0 8px 0; 
-            color: #000 !important; 
-            display: block;
-        }
-        
-        .art-info p { 
-            font-size: 0.85rem; 
-            color: #444 !important; 
-            margin: 0; 
-            letter-spacing: 1px; 
-            text-transform: uppercase; 
-            font-weight: 700;
-            display: block;
-        }
-
+        :root { --bg: #fdfcf0; --pink: #dfb4c6; --sage: #8a8c2b; --text: #1a1a1a; }
+        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; }
+        nav { padding: 20px; display: flex; justify-content: center; gap: 30px; background: var(--sage); position: sticky; top: 0; z-index: 10000; }
+        nav a { text-decoration: none; color: white; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; }
+        .container { max-width: 1200px; margin: 80px auto; padding: 0 40px; }
+        h1 { font-family: 'Bodoni Moda'; font-style: italic; font-size: 4rem; text-align: center; margin-bottom: 80px; color: var(--sage); }
+        .scrapbook { column-count: 3; column-gap: 40px; }
+        .item { display: inline-block; width: 100%; margin-bottom: 60px; background: white; padding: 15px; box-shadow: 10px 15px 40px rgba(0,0,0,0.05); position: relative; transition: 0.4s; }
+        .item:hover { transform: scale(1.03) rotate(0deg); z-index: 5; }
+        .item::before { content: ""; position: absolute; top: -10px; left: 50%; transform: translateX(-50%) rotate(-3deg); width: 80px; height: 25px; background: rgba(223, 180, 198, 0.7); z-index: 2; }
+        .item img { width: 100%; height: auto; display: block; }
+        .info { padding: 20px 10px; text-align: center; }
+        .info h3 { font-family: 'Bodoni Moda'; font-style: italic; font-size: 1.5rem; margin: 0; }
         @media (max-width: 900px) { .scrapbook { column-count: 2; } }
-        @media (max-width: 600px) { .scrapbook { column-count: 1; } }
     </style>
 </head>
 <body>
     <nav>
-        <div style="font-family: 'Bodoni Moda'; font-style: italic; font-size: 1.2rem;">SG</div>
-        <div>
-            <a href="index.html">Home</a>
-            <a href="work.html">Work</a>
-            <a href="atelier.html">Atelier</a>
-            <a href="contact.html">Contact</a>
-        </div>
+        <a href="index.html">Home</a><a href="index.html#about">About Me</a><a href="work.html">Experience</a><a href="atelier.html">Original Works</a><a href="contact.html">Contact Me</a>
     </nav>
     <div class="container">
-        <h1>The Atelier</h1>
+        <h1>Original Works</h1>
         <div class="scrapbook">
-            
-            <div class="scrapbook-item"><img src="art1.jpg"><div class="art-info"><h3>Girl to Woman</h3><p>Black Pen on Cardstock, 2023</p></div></div>
-            <div class="scrapbook-item"><img src="art2.jpg"><div class="art-info"><h3>Woman in a Man</h3><p>Charcoal, 2023</p></div></div>
-            <div class="scrapbook-item"><img src="art3.jpg"><div class="art-info"><h3>Cyclical</h3><p>Paint Markers, 2024</p></div></div>
-            <div class="scrapbook-item"><img src="art4.jpg"><div class="art-info"><h3>Flattery</h3><p>Black Pen, 2026 Commission</p></div></div>
-            <div class="scrapbook-item"><img src="art5.jpg"><div class="art-info"><h3>Hare Over Hair</h3><p>Marker & Pen, 2026 Commission</p></div></div>
-            <div class="scrapbook-item"><img src="art6.jpg"><div class="art-info"><h3>Wine & Dine Shrine</h3><p>Oil Pastel, 2026</p></div></div>
-            <div class="scrapbook-item"><img src="art7.jpg"><div class="art-info"><h3>Fan Favorite</h3><p>Marker & Pen, 2026 Commission</p></div></div>
-            <div class="scrapbook-item"><img src="art8.jpg"><div class="art-info"><h3>Pink Ferrari</h3><p>Paint Marker, Sharpie, 2025</p></div></div>
-            <div class="scrapbook-item"><img src="art9.jpg"><div class="art-info"><h3>A Bold Perspective</h3><p>Chalk Pastels & Marker, 2026</p></div></div>
-            <div class="scrapbook-item"><img src="art10.jpg"><div class="art-info"><h3>Girl Meets World</h3><p>Mixed Media, 2024</p></div></div>
-            <div class="scrapbook-item"><img src="art11.jpg"><div class="art-info"><h3>For Grace</h3><p>Pencil, 2022</p></div></div>
-            <div class="scrapbook-item"><img src="art12.jpg"><div class="art-info"><h3>Dreamscape</h3><p>Chalk Pastel, 2022</p></div></div>
-
+            <div class="item"><img src="art1.jpg"><div class="info"><h3>Girl to Woman</h3><p>Black Pen on Cardstock, 2023</p></div></div>
+            <div class="item"><img src="art2.jpg"><div class="info"><h3>Woman in a Man</h3><p>Charcoal, 2023</p></div></div>
+            <div class="item"><img src="art3.jpg"><div class="info"><h3>Cyclical</h3><p>Paint Markers, 2024</p></div></div>
+            <div class="item"><img src="art4.jpg"><div class="info"><h3>Flattery</h3><p>Black Pen, 2026 Commission</p></div></div>
+            <div class="item"><img src="art5.jpg"><div class="info"><h3>Hare Over Hair</h3><p>Marker & Pen, 2026 Commission</p></div></div>
+            <div class="item"><img src="art6.jpg"><div class="info"><h3>Wine & Dine Shrine</h3><p>Oil Pastel, 2026</p></div></div>
+            <div class="item"><img src="art7.jpg"><div class="info"><h3>Fan Favorite</h3><p>Marker & Pen, 2026 Commission</p></div></div>
+            <div class="item"><img src="art8.jpg"><div class="info"><h3>Pink Ferrari</h3><p>Paint Marker, Sharpie, 2025</p></div></div>
+            <div class="item"><img src="art9.jpg"><div class="info"><h3>A Bold Perspective</h3><p>Chalk Pastels & Marker, 2026</p></div></div>
+            <div class="item"><img src="art10.jpg"><div class="info"><h3>Girl Meets World</h3><p>Mixed Media, 2024</p></div></div>
+            <div class="item"><img src="art11.jpg"><div class="info"><h3>For Grace</h3><p>Pencil, 2022</p></div></div>
+            <div class="item"><img src="art12.jpg"><div class="info"><h3>Dreamscape</h3><p>Chalk Pastel, 2022</p></div></div>
         </div>
     </div>
 </body>
