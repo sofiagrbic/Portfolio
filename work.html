@@ -7,20 +7,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Bodoni+Moda:ital,wght@1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root { --bg: #fdfcf0; --pink: #dfb4c6; --sage: #8a8c2b; --dark: #4e5f3b; --beige: #f8f4eb; }
-        body { margin: 0; background: var(--bg); font-family: 'Inter', sans-serif; }
-        nav { padding: 20px; display: flex; justify-content: center; gap: 30px; background: var(--sage); position: sticky; top: 0; z-index: 1000; }
-        nav a { text-decoration: none; color: white; font-weight: 600; font-size: 0.8rem; letter-spacing: 1px; }
-        
+        body { margin: 0; background: var(--bg); font-family: 'Inter', sans-serif; color: var(--dark); }
+        nav { padding: 20px; display: flex; justify-content: center; gap: 30px; background: var(--sage); position: sticky; top: 0; z-index: 10000; }
+        nav a { text-decoration: none; color: white; font-weight: 600; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; }
         .container { max-width: 1100px; margin: 80px auto; padding: 40px; }
         .header-box { background: var(--dark); color: white; padding: 15px 50px; display: inline-block; margin-bottom: 20px; }
         h1 { font-family: 'Pinyon Script'; font-size: 5rem; margin: 0; }
-
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-top: 60px; }
-        .card { background: var(--beige); padding: 40px; position: relative; border: 1px solid #eee; transition: 0.4s; }
-        .card:hover { transform: translateY(-5px); box-shadow: 10px 10px 0px var(--pink); }
-        
-        .card h3 { font-family: 'Bodoni Moda'; font-style: italic; font-size: 1.6rem; color: var(--dark); margin-bottom: 15px; }
-        .card p { line-height: 1.7; color: #444; font-size: 0.95rem; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 60px; }
+        .card { background: var(--beige); padding: 40px; border: 1px solid #eee; transition: 0.4s; }
+        .card:hover { transform: translateY(-10px) rotate(1deg); box-shadow: 10px 10px 0px var(--pink); }
+        h3 { font-family: 'Bodoni Moda'; font-style: italic; font-size: 1.8rem; margin-top: 0; }
+        @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -29,25 +26,12 @@
     </nav>
     <div class="container">
         <div class="header-box"><h1>Experience</h1></div>
-        <p style="text-transform: uppercase; letter-spacing: 4px; font-weight: 700; color: var(--dark);">Brands I've Worked For</p>
-
+        <p style="text-transform: uppercase; letter-spacing: 4px; font-weight: 700;">Brands I've Worked For</p>
         <div class="grid">
-            <div class="card">
-                <h3>Social Layer.</h3>
-                <p>Leading creative strategy and social media content across multiple brands by developing campaign concepts, planning content, interviewing talent, and collaborating with editors to create engaging digital storytelling. Spear-heading efforts to make social media a more positive, healthy, and unfiltered experience.</p>
-            </div>
-            <div class="card">
-                <h3>Lovers Counseling</h3>
-                <p>Leading a team as Creative Strategy Lead, I helped transform meaningful mental health conversations into engaging social media through strategic storytelling, educational content, interviews, and brand messaging that made therapy feel more approachable, authentic, and accessible.</p>
-            </div>
-            <div class="card">
-                <h3>Executive HQ</h3>
-                <p>Developed founder-focused content strategies that strengthened Executive HQ's personal brand through educational storytelling, interviews, thought leadership, and community-driven social media campaigns. Leading a team of four as the Creative Strategy Lead.</p>
-            </div>
-            <div class="card">
-                <h3>Thera-Dynamics</h3>
-                <p>Developed a comprehensive social media growth strategy for Thera-Dynamics Physical Therapy, including market research, brand positioning, visual identity, content systems, and platform planning. Created a long-term roadmap to build community awareness, patient trust, and digital leadership in Milwaukee.</p>
-            </div>
+            <div class="card"><h3>Social Layer.</h3><p>Leading creative strategy and social media content across multiple brands by developing campaign concepts, planning content, and collaborating with talent.</p></div>
+            <div class="card"><h3>Lovers Counseling</h3><p>As Creative Strategy Lead, I help transform mental health conversations into authentic storytelling that makes therapy approachable and accessible.</p></div>
+            <div class="card"><h3>Executive HQ</h3><p>Developing founder-focused content strategies and educational storytelling that strengthen personal brands and build community.</p></div>
+            <div class="card"><h3>Thera-Dynamics</h3><p>Developing comprehensive growth strategies, market research, and brand positioning to build community trust and digital leadership.</p></div>
         </div>
     </div>
 </body>
