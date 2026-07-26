@@ -8,30 +8,51 @@
     <style>
         :root { --bg: #fdfcf0; --pink: #dfb4c6; --sage: #8a8c2b; --dark: #4e5f3b; --beige: #f8f4eb; }
         body { margin: 0; background: var(--bg); font-family: 'Inter', sans-serif; color: var(--dark); }
-        nav { padding: 20px; display: flex; justify-content: center; gap: 30px; background: var(--sage); position: sticky; top: 0; z-index: 10000; }
-        nav a { text-decoration: none; color: white; font-weight: 600; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; }
+        nav { padding: 20px; display: flex; justify-content: center; gap: 30px; background: var(--sage); position: sticky; top: 0; z-index: 1000; }
+        nav a { text-decoration: none; color: white; font-weight: 600; font-size: 0.8rem; }
         .container { max-width: 1100px; margin: 80px auto; padding: 40px; }
-        .header-box { background: var(--dark); color: white; padding: 15px 50px; display: inline-block; margin-bottom: 20px; }
-        h1 { font-family: 'Pinyon Script'; font-size: 5rem; margin: 0; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 60px; }
-        .card { background: var(--beige); padding: 40px; border: 1px solid #eee; transition: 0.4s; }
-        .card:hover { transform: translateY(-10px) rotate(1deg); box-shadow: 10px 10px 0px var(--pink); }
-        h3 { font-family: 'Bodoni Moda'; font-style: italic; font-size: 1.8rem; margin-top: 0; }
-        @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
+        
+        .exp-section { margin-bottom: 120px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .exp-text { padding: 40px; background: var(--beige); border-left: 5px solid var(--pink); }
+        .exp-collage { width: 100%; border: 10px solid white; box-shadow: 10px 10px 30px rgba(0,0,0,0.1); }
+        
+        h2 { font-family: 'Pinyon Script'; font-size: 4rem; color: var(--dark); margin: 0; }
+        h3 { font-family: 'Bodoni Moda'; font-style: italic; font-size: 1.8rem; margin-top: 10px; }
+
+        .brand-wall { text-align: center; margin-top: 100px; padding: 60px; background: var(--dark); color: white; }
+        .brand-collage { width: 100%; max-width: 1000px; margin-top: 40px; border: 15px solid white; }
+
+        @media (max-width: 900px) { .exp-section { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a><a href="index.html#about">About Me</a><a href="work.html">Experience</a><a href="atelier.html">Original Works</a><a href="contact.html">Contact Me</a>
+        <a href="index.html">Home</a><a href="work.html">Experience</a><a href="atelier.html">Original Works</a><a href="contact.html">Contact Me</a>
     </nav>
     <div class="container">
-        <div class="header-box"><h1>Experience</h1></div>
-        <p style="text-transform: uppercase; letter-spacing: 4px; font-weight: 700;">Brands I've Worked For</p>
-        <div class="grid">
-            <div class="card"><h3>Social Layer.</h3><p>Leading creative strategy and social media content across multiple brands by developing campaign concepts, planning content, and collaborating with talent.</p></div>
-            <div class="card"><h3>Lovers Counseling</h3><p>As Creative Strategy Lead, I help transform mental health conversations into authentic storytelling that makes therapy approachable and accessible.</p></div>
-            <div class="card"><h3>Executive HQ</h3><p>Developing founder-focused content strategies and educational storytelling that strengthen personal brands and build community.</p></div>
-            <div class="card"><h3>Thera-Dynamics</h3><p>Developing comprehensive growth strategies, market research, and brand positioning to build community trust and digital leadership.</p></div>
+        <!-- Social Layer -->
+        <div class="exp-section">
+            <div class="exp-text">
+                <h2>Social Layer.</h2>
+                <p>Leading creative strategy and social media content across multiple brands by developing campaign concepts and engaging digital storytelling.</p>
+            </div>
+            <img src="sl_collage.jpg" class="exp-collage">
+        </div>
+
+        <!-- Lovers -->
+        <div class="exp-section">
+            <img src="lc_collage.jpg" class="exp-collage">
+            <div class="exp-text">
+                <h2>Lovers Counseling</h2>
+                <p>As Creative Strategy Lead, I helped transform mental health conversations into approachable brand messaging.</p>
+            </div>
+        </div>
+
+        <!-- Ambassadorship Section -->
+        <div class="brand-wall">
+            <h2 style="color: white;">Brand Ambassadorships</h2>
+            <p style="letter-spacing: 2px;">Barry's • Moments • UberOne • David Protein • Edikted</p>
+            <img src="brands_collage.jpg" class="brand-collage">
         </div>
     </div>
 </body>
